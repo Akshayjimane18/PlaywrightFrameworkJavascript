@@ -21,7 +21,7 @@ test.beforeEach(() => {
 
 });
 
-test.only('Place Order', async ({browser, page}) => {
+test('Place Order', async ({browser, page}) => {
 
     //method to execute javascript code
     page.addInitScript(value=>{

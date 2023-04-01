@@ -18,7 +18,8 @@ test.beforeAll(async ()=>{
 
 });
 
-test.only('Network Intercept', async ({browser, page}) => {
+//test.only//run specific
+test('Network Intercept', async ({browser, page}) => {
 
     //method to execute javascript code
     page.addInitScript(value=>{

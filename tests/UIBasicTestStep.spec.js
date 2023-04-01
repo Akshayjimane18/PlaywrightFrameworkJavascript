@@ -1,5 +1,8 @@
 const { test, expect } = require('@playwright/test');
 
+//test.describe.configure({mode:'serial'});
+test.describe.configure({mode:'parallel'});
+//test.skip//also possible to skip the testcase
 test('UI Controls', async ({ browser, page }) => {
 
     // const context = await browser.newContext();
@@ -94,7 +97,7 @@ test('Child window handling', async ({ browser }) => {
 
 });
 
-test.only('Client New App', async ({ browser, page }) => {
+test('Client New App', async ({ browser, page }) => {
     await page.goto("https://rahulshettyacademy.com/client");
 
     const products = page.locator(".card-body");
